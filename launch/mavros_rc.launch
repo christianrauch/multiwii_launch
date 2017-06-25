@@ -1,0 +1,10 @@
+<launch>
+	<node pkg="joy" type="joy_node" name="joy" required="True">
+		<param name="autorepeat_rate" value="100" /> <!-- Minimal update rate, Hz -->
+	</node>
+
+	<node pkg="mavros_extras" type="mavteleop" name="mavteleop" args="-rc -n ~" required="True" output="screen">
+		<rosparam command="load" file="$(find multiwii_launch)/cfg/AETR1234.yaml" />
+		<remap from="/rc/override" to="/rc/override/raw"/>
+	</node>
+</launch>

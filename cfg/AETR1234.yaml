@@ -1,0 +1,24 @@
+axes_map:
+  roll: 0 # Ailerons
+  pitch: 1 # Elevators
+  throttle: 2 # Throttle
+  yaw: 3 # Rudder
+axes_scale:
+  roll: -1.0
+  pitch: -1.0
+  yaw: -1.0
+  throttle: -1.0
+  
+rc_modes:
+  offboard:
+    rc_channel: 4
+    rc_value: 1000
+    joy_flags: [ [2,1] ]
+  auto:
+    rc_channel: 4
+    rc_value: 1500
+    joy_flags: [ [3,1] ]
+  manual:
+    rc_channel: 4
+    rc_value: 2000
+    joy_flags: [ [0,1] ]
